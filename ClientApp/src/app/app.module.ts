@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SuitComponent } from './suit/suit.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SuitComponent } from './suit/suit.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    SuitComponent
+    SuitComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
