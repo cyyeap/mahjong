@@ -8,6 +8,5 @@ export enum NumberFlag {
     Six = 1 << 5, 
     Seven = 1 << 6,
     Eight = 1 << 7, 
-    Nine = 1 << 8, 
-    Ten = 1 << 9
+    Nine = 1 << 8
 }
