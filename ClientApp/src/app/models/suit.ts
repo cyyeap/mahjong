@@ -15,7 +15,7 @@ export class Suit {
             case (SuitFlag.Bamboo): return '條';
             case (SuitFlag.Character): return '萬';
             case (SuitFlag.Dot): return '筒';
-            default: console.log('unexpected behaviour in getSuitString()');
+            default: console.log('unexpected behaviour in getSuitString()' + this.suitFlag + ' and ' + this.number);
         }
     }
 
@@ -30,12 +30,12 @@ export class Suit {
             case (NumberFlag.Seven): return '七';
             case (NumberFlag.Eight): return '八';
             case (NumberFlag.Nine): return '九';
-            default: console.log('unexpected behaviour in getNumberString()');
+            default: console.log('unexpected behaviour in getNumberString()' + this.suitFlag + ' and ' + this.number);
         }
     }
 
     public getName() {
-        let fullSuitName = this.getSuitString() + this.getNumberString();
+        let fullSuitName = this.getNumberString() + this.getSuitString();
         return fullSuitName;
     }
 }

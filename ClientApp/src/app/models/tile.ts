@@ -9,7 +9,7 @@ export class Tile {
         this.isSuit = true;
     }
 
-    getString() {
+    getName() {
         if (this.isSuit) {
             return this.suit.getName();
         }
