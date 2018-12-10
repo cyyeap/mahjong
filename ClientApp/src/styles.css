@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+/* https://en.wikipedia.org/wiki/Mahjong#Unicode */
+.east:before                {content: "\01F000";}
+.south:before               {content: "\01F001";}
+.west:before                {content: "\01F002";}
+.north:before               {content: "\01F003";}
+
+.red:before                 {content: "\01F004";}
+.green:before               {content: "\01F005";}
+.white:before               {content: "\01F006";}
+
+.one-char:before            {content: "\01F007";}
+.two-char:before            {content: "\01F008";}
+.three-char:before          {content: "\01F009";}
+.four-char:before           {content: "\01F00A";}
+.five-char:before           {content: "\01F00B";}
+.six-char:before            {content: "\01F00C";}
+.seven-char:before          {content: "\01F00D";}
+.eight-char:before          {content: "\01F00E";}
+.nine-char:before           {content: "\01F00F";}
+
+
+.one-bamboo:before          {content: "\01F010";}
+.two-bamboo:before          {content: "\01F011";}
+.three-bamboo:before        {content: "\01F012";}
+.four-bamboo:before         {content: "\01F013";}
+.five-bamboo:before         {content: "\01F014";}
+.six-bamboo:before          {content: "\01F015";}
+.seven-bamboo:before        {content: "\01F016";}
+.eight-bamboo:before        {content: "\01F017";}
+.nine-bamboo:before         {content: "\01F018";}
+
+.one-circle:before          {content: "\01F019";}
+.two-circle:before          {content: "\01F01A";}
+.three-circle:before        {content: "\01F01B";}
+.four-circle:before         {content: "\01F01C";}
+.five-circle:before         {content: "\01F01D";}
+.six-circle:before          {content: "\01F01E";}
+.seven-circle:before        {content: "\01F01F";}
+.eight-circle:before        {content: "\01F020";}
+.nine-circles:before        {content: "\01F021";}
+
+.plum:before                {content: "\01F022";}
+.orchid:before              {content: "\01F023";}
+.bamboo:before              {content: "\01F024";}
+.chrysanthemum:before       {content: "\01F025";}
+
+.spring:before              {content: "\01F026";}
+.summer:before              {content: "\01F027";}
+.autumn:before              {content: "\01F028";}
+.winter:before              {content: "\01F029";}
