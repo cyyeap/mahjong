@@ -1,6 +1,5 @@
 <ul>
-  <li *ngFor="let tile of deck.allTiles">
+  <li *ngFor="let tile of deck.allTiles" class="{{tile.getTileClass()}}">
     {{tile.getName()}}
   </li>
 </ul>
-<p>sldskvhhvnvndskds</p>

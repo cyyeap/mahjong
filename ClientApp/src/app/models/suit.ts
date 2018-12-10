@@ -10,6 +10,15 @@ export class Suit {
         this.suitFlag = suitFlag;
     }
 
+    private getSuitClass(): string {
+        switch (this.suitFlag) {
+            case (SuitFlag.Bamboo): return 'bamboo';
+            case (SuitFlag.Character): return 'char';
+            case (SuitFlag.Dot): return 'circle';
+            default: console.log('unexpected behaviour in getSuitString()' + this.suitFlag + ' and ' + this.number);
+        }
+    }
+
     private getSuitString(): string {
         switch (this.suitFlag) {
             case (SuitFlag.Bamboo): return '條';
@@ -37,6 +46,15 @@ export class Suit {
     public getName() {
         let fullSuitName = this.getNumberString() + this.getSuitString();
         return fullSuitName;
+    }
+
+    private getNumberClass(): string {
+        return NumberFlag[this.number].toLowerCase();
+    }
+
+    public getTileClass() {
+        let tile = this.getNumberClass() + '-' + this.getSuitClass();
+        return tile;
     }
 }
 

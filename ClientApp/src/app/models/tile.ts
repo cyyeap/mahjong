@@ -14,4 +14,8 @@ export class Tile {
             return this.suit.getName();
         }
     }
+
+    getTileClass() {
+        return this.suit.getTileClass();
+    }
 }
