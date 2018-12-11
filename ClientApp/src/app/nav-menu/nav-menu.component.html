@@ -33,6 +33,11 @@
                         <span class='glyphicon glyphicon-th-list'></span> Board
                     </a>
                 </li>
+                <li [routerLinkActive]='["link-active"]'>
+                    <a [routerLink]='["/tutorial"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-th-list'></span> Tutorial
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
