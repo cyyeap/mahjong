@@ -1,7 +1,7 @@
 import { Tile } from "./tile";
-import { SuitFlag } from "../suit-flag.enum";
-import { NumberFlag } from "../number-flag.enum";
 import { Suit } from "./suit";
+import { SuitFlag } from '../enums/suit-flag.enum';
+import { NumberFlag } from '../enums/number-flag.enum';
 
 export class Deck {
     allTiles: Array<Tile> = [];
@@ -15,7 +15,11 @@ export class Deck {
             Object.values(NumberFlag).filter(value => !isNaN(Number(value))).forEach(number => {
                 let newSuit = new Suit(suit, number);
                 let newTile = new Tile(newSuit);
-                this.allTiles.push(newTile);
+                let NUMBEROFTILE_PERSUITNUMBER = 4;
+                let tileNo = 0;
+                for (tileNo = 0; tileNo < NUMBEROFTILE_PERSUITNUMBER; tileNo++) {
+                    this.allTiles.push(newTile);
+                }
             });
         });
     }

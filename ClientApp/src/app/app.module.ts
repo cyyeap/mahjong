@@ -13,6 +13,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SuitComponent } from './suit/suit.component';
 import { BoardComponent } from './board/board.component';
 import { TutorialComponent } from './tutorial/tutorial/tutorial.component';
+import { ChartComponent } from './chart/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TutorialComponent } from './tutorial/tutorial/tutorial.component';
     FetchDataComponent,
     SuitComponent,
     BoardComponent,
-    TutorialComponent
+    TutorialComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

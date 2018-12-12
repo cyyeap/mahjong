@@ -1,5 +1,5 @@
-import { SuitFlag } from "../suit-flag.enum";
-import { NumberFlag } from "../number-flag.enum";
+import { NumberFlag } from '../enums/number-flag.enum';
+import { SuitFlag } from '../enums/suit-flag.enum';
 
 export class Suit {
     number: NumberFlag;
@@ -10,7 +10,7 @@ export class Suit {
         this.suitFlag = suitFlag;
     }
 
-    private getSuitClass(): string {
+    private getUnicodeClass(): string {
         switch (this.suitFlag) {
             case (SuitFlag.Bamboo): return 'bamboo';
             case (SuitFlag.Character): return 'char';
@@ -53,7 +53,7 @@ export class Suit {
     }
 
     public getTileClass() {
-        let tile = this.getNumberClass() + '-' + this.getSuitClass();
+        let tile = this.getNumberClass() + '-' + this.getUnicodeClass();
         return tile;
     }
 }
