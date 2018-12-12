@@ -1,21 +1,18 @@
 import { Suit } from "./suit";
+import { TileType } from '../enums/tile-type.enum';
 
 export class Tile {
-    private suit: Suit;
-    private isSuit: boolean = false;
+    private tileType: TileType;
 
-    constructor(suit: Suit) {
-        this.suit = suit;
-        this.isSuit = true;
+    constructor(tileType: TileType) {
+        this.tileType = tileType;
     }
 
     getName() {
-        if (this.isSuit) {
-            return this.suit.getName();
-        }
+        return '';
     }
 
     getTileClass() {
-        return this.suit.getTileClass();
+        return '';
     }
 }

@@ -1,13 +1,26 @@
 import { NumberFlag } from '../enums/number-flag.enum';
 import { SuitFlag } from '../enums/suit-flag.enum';
+import { TileType } from '../enums/tile-type.enum';
+import { Tile } from './tile';
 
-export class Suit {
+export class Suit extends Tile {
     number: NumberFlag;
     suitFlag: SuitFlag;
 
-    constructor(suitFlag: SuitFlag, number: NumberFlag) {
+    constructor(number: NumberFlag, suitFlag: SuitFlag) {
+        super(TileType.Suit);
         this.number = number;
         this.suitFlag = suitFlag;
+    }
+
+    public getName() {
+        let fullSuitName = this.getNumberString() + this.getSuitString();
+        return fullSuitName;
+    }
+
+    public getTileClass() {
+        let tile = this.getNumberClass() + '-' + this.getUnicodeClass();
+        return tile;
     }
 
     private getUnicodeClass(): string {
@@ -43,18 +56,8 @@ export class Suit {
         }
     }
 
-    public getName() {
-        let fullSuitName = this.getNumberString() + this.getSuitString();
-        return fullSuitName;
-    }
-
     private getNumberClass(): string {
         return NumberFlag[this.number].toLowerCase();
-    }
-
-    public getTileClass() {
-        let tile = this.getNumberClass() + '-' + this.getUnicodeClass();
-        return tile;
     }
 }
 
