@@ -10,7 +10,6 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { SuitComponent } from './suit/suit.component';
 import { BoardComponent } from './board/board.component';
 import { TutorialComponent } from './tutorial/tutorial/tutorial.component';
 import { ChartComponent } from './chart/chart/chart.component';
@@ -22,7 +21,6 @@ import { ChartComponent } from './chart/chart/chart.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    SuitComponent,
     BoardComponent,
     TutorialComponent,
     ChartComponent
