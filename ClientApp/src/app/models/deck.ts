@@ -2,7 +2,6 @@ import { Tile } from "./tile";
 import { Suit } from "./suit";
 import { SuitFlag } from '../enums/suit-flag.enum';
 import { NumberFlag } from '../enums/number-flag.enum';
-import { TileType } from '../enums/tile-type.enum';
 import { Bonus } from './bonus';
 import { SpecialTileFlag } from '../enums/special-tile-flag.enum';
 import { WindFlag } from '../enums/wind-flag.enum';
@@ -13,21 +12,29 @@ import { Dragon } from './dragon';
 export class Deck {
     allTiles: Array<Tile> = [];
 
-
     constructor() {
         this.createNewDeck()
     }
 
+    public dealTile() {
+        let poppedTile = this.allTiles.pop();
+        return poppedTile;
+    }
+
+    public tilesLeft() {
+        return this.allTiles.length;
+    }
+
     private createNewDeck() {
-        console.log(this.allTiles.length);
         this.createSuits();
-        console.log(this.allTiles.length);
         this.createBonuses();
-        console.log(this.allTiles.length);
         this.createWinds();
-        console.log(this.allTiles.length);
         this.createDragons();
-        console.log(this.allTiles.length);
+        this.shuffle();
+    }
+
+    private shuffle() {
+        this.allTiles.sort(() => Math.random() - 0.5);
     }
 
     private appendSameTilesFourTimes(tile: Tile) {
