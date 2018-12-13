@@ -14,6 +14,6 @@ export class Wind extends Tile {
     }
 
     public getTileClass() {
-        return '';
+        return WindFlag[this.windFlag].toString().toLowerCase();
     }
 }

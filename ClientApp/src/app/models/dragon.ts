@@ -15,6 +15,6 @@ export class Dragon extends Tile {
     }
 
     public getTileClass() {
-        return '';
+        return DragonFlag[this.dragonFlag].toString().toLowerCase();
     }
 }
